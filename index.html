@@ -3,34 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkNNUyBDb1AgUmVmZXJlbmNlIFx1MjAxNCBJbnBhdGllbnQgUHN5Y2hpYXRyaWMiLCAic2hvcnRfbmFtZSI6ICJDb1AgUmVmZXJlbmNlIiwgImRlc2NyaXB0aW9uIjogIkNNUyBDb25kaXRpb25zIG9mIFBhcnRpY2lwYXRpb24gcmVmZXJlbmNlIGZvciBpbnBhdGllbnQgc3RhdGUgcHN5Y2hpYXRyaWMgaG9zcGl0YWxzICg0MiBDRlIgUGFydCA0ODIpIiwgInN0YXJ0X3VybCI6ICIuIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxZTFlMWUiLCAidGhlbWVfY29sb3IiOiAiIzFlMWUxZSIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdC1wcmltYXJ5IiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIZHBaSFJvUFNJeE9USWlJR2hsYVdkb2REMGlNVGt5SWlCMmFXVjNRbTk0UFNJd0lEQWdNVGt5SURFNU1pSStDaUFnUEhKbFkzUWdkMmxrZEdnOUlqRTVNaUlnYUdWcFoyaDBQU0l4T1RJaUlISjRQU0l6TWlJZ1ptbHNiRDBpSXpGbE1XVXhaU0l2UGdvZ0lEeDBaWGgwSUhnOUlqazJJaUI1UFNJeE1UZ2lJR1p2Ym5RdFptRnRhV3g1UFNKellXNXpMWE5sY21sbUlpQm1iMjUwTFhkbGFXZG9kRDBpTnpBd0lpQm1iMjUwTFhOcGVtVTlJamt3SWlCbWFXeHNQU0lqTkdFNFptRTRJaUIwWlhoMExXRnVZMmh2Y2owaWJXbGtaR3hsSWo3aWhKNDhMM1JsZUhRK0Nqd3ZjM1puUGc9PSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSGRwWkhSb1BTSTFNVElpSUdobGFXZG9kRDBpTlRFeUlpQjJhV1YzUW05NFBTSXdJREFnTlRFeUlEVXhNaUkrQ2lBZ1BISmxZM1FnZDJsa2RHZzlJakU1TWlJZ2FHVnBaMmgwUFNJeE9USWlJSEo0UFNJMk5DSWdabWxzYkQwaUl6RmxNV1V4WlNJdlBnb2dJRHgwWlhoMElIZzlJamsySWlCNVBTSXpNVFlpSUdadmJuUXRabUZ0YVd4NVBTSnpZVzV6TFhObGNtbG1JaUJtYjI1MExYZGxhV2RvZEQwaU56QXdJaUJtYjI1MExYTnBlbVU5SWpJME1DSWdabWxzYkQwaUl6UmhPR1poT0NJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSSs0b1NlUEM5MFpYaDBQZ284TDNOMlp6ND0iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV19">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CoP Reference">
+<meta name="theme-color" content="#1e1e1e">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSIzMiIgZmlsbD0iIzFlMWUxZSIvPgogIDx0ZXh0IHg9Ijk2IiB5PSIxMTgiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjkwIiBmaWxsPSIjNGE4ZmE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7ihJ48L3RleHQ+Cjwvc3ZnPg==">
 <title>CMS CoP Reference — Inpatient Psychiatric Hospitals</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* System fonts — offline-safe. On Android: Roboto / Roboto Mono (indistinguishable quality). */
+:root {
+  --font-sans: 'IBM Plex Sans', 'Roboto', 'Noto Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-mono), 'Roboto Mono', 'Noto Sans Mono', 'Courier New', monospace;
+}
+</style>
 <style>
 :root{--bg:#1e1e1e;--bg2:#252525;--bg3:#2e2e2e;--border:#3a3a3a;--text:#e0e0e0;--text-dim:#909090;--text-muted:#666;--accent:#5b9bd5;--accent-dim:#1e3550;--tag-psych:#2d5e41;--tag-psych-text:#7dd8a4;--tag-general:#3a3a5a;--tag-general-text:#9898cc;--hl-bg:#4a3a08;--hl:#f0c040}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'IBM Plex Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.6}
 header{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 14px 0;position:sticky;top:0;z-index:100}
 .header-title h1{font-size:13px;font-weight:600;color:var(--text);letter-spacing:.02em}
-.header-title p{font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-top:1px;margin-bottom:10px}
+.header-title p{font-size:11px;color:var(--text-muted);font-family:var(--font-mono);margin-top:1px;margin-bottom:10px}
 .search-wrap{position:relative;margin-bottom:8px}
 .search-wrap svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--text-muted);pointer-events:none}
-#search{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:15px;padding:9px 12px 9px 36px;outline:none;transition:border-color .15s}
+#search{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--font-sans);font-size:15px;padding:9px 12px 9px 36px;outline:none;transition:border-color .15s}
 #search:focus{border-color:var(--accent)}
 #search::placeholder{color:var(--text-muted)}
 .filter-row{display:flex;gap:6px;padding-bottom:9px;overflow-x:auto;scrollbar-width:none}
 .filter-row::-webkit-scrollbar{display:none}
-.filter-btn{white-space:nowrap;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text-dim);font-size:11px;font-family:'IBM Plex Mono',monospace;padding:4px 10px;cursor:pointer;transition:all .15s;letter-spacing:.03em}
+.filter-btn{white-space:nowrap;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text-dim);font-size:11px;font-family:var(--font-mono);padding:4px 10px;cursor:pointer;transition:all .15s;letter-spacing:.03em}
 .filter-btn.active,.filter-btn:hover{background:var(--accent-dim);border-color:var(--accent);color:var(--accent)}
-.results-meta{font-size:11px;color:var(--text-muted);padding:6px 14px;font-family:'IBM Plex Mono',monospace;border-bottom:1px solid var(--border);background:var(--bg)}
+.results-meta{font-size:11px;color:var(--text-muted);padding:6px 14px;font-family:var(--font-mono);border-bottom:1px solid var(--border);background:var(--bg)}
 main{padding:6px 0 60px}
-.section-divider{font-size:10px;font-family:'IBM Plex Mono',monospace;letter-spacing:.1em;color:var(--text-muted);padding:14px 14px 4px;text-transform:uppercase}
+.section-divider{font-size:10px;font-family:var(--font-mono);letter-spacing:.1em;color:var(--text-muted);padding:14px 14px 4px;text-transform:uppercase}
 .cop-card{margin:0 10px 5px;background:var(--bg2);border:1px solid var(--border);border-radius:7px;overflow:hidden}
 .cop-header{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
-.cop-citation{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);white-space:nowrap;font-weight:500;padding-top:1px}
+.cop-citation{font-family:var(--font-mono);font-size:12px;color:var(--accent);white-space:nowrap;font-weight:500;padding-top:1px}
 .cop-title-wrap{flex:1;min-width:0}
 .cop-title{font-size:13px;font-weight:500;color:var(--text);line-height:1.35}
 .cop-badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
-.badge{font-size:10px;font-family:'IBM Plex Mono',monospace;padding:1px 6px;border-radius:3px;letter-spacing:.03em;font-weight:500}
+.badge{font-size:10px;font-family:var(--font-mono);padding:1px 6px;border-radius:3px;letter-spacing:.03em;font-weight:500}
 .badge-psych{background:var(--tag-psych);color:var(--tag-psych-text)}
 .badge-general{background:var(--tag-general);color:var(--tag-general-text)}
 .cop-chevron{color:var(--text-muted);transition:transform .2s;flex-shrink:0;margin-top:2px}
@@ -39,22 +52,65 @@ main{padding:6px 0 60px}
 .cop-card.open .cop-body{display:block}
 .reg-intro{font-size:13.5px;color:var(--text);line-height:1.65;padding:12px 13px 10px;border-bottom:1px solid var(--border)}
 .reg-body{padding:10px 13px 12px}
-.std-head{font-size:12px;font-weight:600;color:var(--accent);font-family:'IBM Plex Mono',monospace;margin-top:14px;margin-bottom:4px;letter-spacing:.01em;font-style:normal}
+.std-head{font-size:12px;font-weight:600;color:var(--accent);font-family:var(--font-mono);margin-top:14px;margin-bottom:4px;letter-spacing:.01em;font-style:normal}
 .std-head:first-child{margin-top:0}
+.std-collapsed{opacity:.3;margin-bottom:0;pointer-events:none}
 .para{font-size:13px;color:#c8c8c8;line-height:1.65;margin-bottom:4px}
 .para-indent-1{padding-left:18px}
 .para-indent-2{padding-left:36px}
 .para-indent-3{padding-left:54px}
-.para-label{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#7a9cbf;margin-right:5px;font-weight:500}
-.cfr-source{margin:10px 13px 0;font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--text-muted);border-top:1px solid var(--border);padding:8px 0 12px}
+.para-label{font-family:var(--font-mono);font-size:11.5px;color:#7a9cbf;margin-right:5px;font-weight:500}
+.cfr-source{margin:10px 13px 0;font-size:11px;font-family:var(--font-mono);color:var(--text-muted);border-top:1px solid var(--border);padding:8px 0 12px}
 .cfr-source a{color:var(--accent);text-decoration:none}
 mark{background:var(--hl-bg);color:var(--hl);border-radius:2px;padding:0 1px}
 .no-results{text-align:center;padding:60px 20px;color:var(--text-muted);font-size:14px;display:none}
 .no-results.show{display:block}
 @media(min-width:600px){header{padding:16px 16px 0}.cop-card{margin:0 14px 6px}.para-indent-1{padding-left:22px}.para-indent-2{padding-left:44px}.para-indent-3{padding-left:66px}}
 </style>
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    // Register SW from a blob so it works from file:// and any origin
+    const swCode = atob('CmNvbnN0IENBQ0hFID0gJ2NvcC1yZWYtdjEnOwpzZWxmLmFkZEV2ZW50TGlzdGVuZXIoJ2luc3RhbGwnLCBlID0+IHsKICBlLndhaXRVbnRpbCgKICAgIGNhY2hlcy5vcGVuKENBQ0hFKS50aGVuKGNhY2hlID0+IGNhY2hlLmFkZCgnLycpKQogICAgICAuY2F0Y2goKCkgPT4ge30pIC8vIHN0YW5kYWxvbmUgYmxvYiDigJQgbm90aGluZyB0byBjYWNoZSwganVzdCBhY3RpdmF0ZQogICk7CiAgc2VsZi5za2lwV2FpdGluZygpOwp9KTsKc2VsZi5hZGRFdmVudExpc3RlbmVyKCdhY3RpdmF0ZScsIGUgPT4gewogIGUud2FpdFVudGlsKHNlbGYuY2xpZW50cy5jbGFpbSgpKTsKfSk7CnNlbGYuYWRkRXZlbnRMaXN0ZW5lcignZmV0Y2gnLCBlID0+IHsKICBlLnJlc3BvbmRXaXRoKAogICAgY2FjaGVzLm1hdGNoKGUucmVxdWVzdCkudGhlbihyID0+IHIgfHwgZmV0Y2goZS5yZXF1ZXN0KS5jYXRjaCgoKSA9PiBuZXcgUmVzcG9uc2UoJycsIHtzdGF0dXM6IDUwM30pKSkKICApOwp9KTsK');
+    const blob = new Blob([swCode], {type: 'application/javascript'});
+    const swUrl = URL.createObjectURL(blob);
+    navigator.serviceWorker.register(swUrl, {scope: './'}
+    ).then(reg => {
+      // Cache this page itself for offline use
+      if('caches' in window){
+        caches.open('cop-ref-v1').then(cache => {
+          cache.add(location.href).catch(()=>{});
+        });
+      }
+    }).catch(()=>{});
+  });
+}
+</script>
 </head>
 <body>
+<div id="installBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a2a33;border-top:1px solid #2e4a5a;padding:12px 16px;z-index:9999;display:flex;align-items:center;gap:12px;font-size:13px;color:#c8c8c8">
+  <span style="flex:1">Add to home screen for offline use</span>
+  <button onclick="doInstall()" style="background:#4a8fa8;color:#fff;border:none;padding:7px 14px;border-radius:6px;font-size:13px;cursor:pointer">Install</button>
+  <button onclick="document.getElementById('installBanner').style.display='none'" style="background:transparent;color:#888;border:none;font-size:18px;cursor:pointer;padding:0 4px">✕</button>
+</div>
+<script>
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const b = document.getElementById('installBanner');
+  if(b) b.style.display = 'flex';
+});
+function doInstall() {
+  const b = document.getElementById('installBanner');
+  if(b) b.style.display = 'none';
+  if(deferredPrompt) { deferredPrompt.prompt(); deferredPrompt = null; }
+}
+window.addEventListener('appinstalled', () => {
+  const b = document.getElementById('installBanner');
+  if(b) b.style.display = 'none';
+});
+</script>
 <header>
   <div class="header-title">
     <h1>CMS Conditions of Participation</h1>
@@ -683,20 +739,69 @@ let activeFilter='all',activeQuery='';
 
 function hl(t){if(!activeQuery)return t;const e=activeQuery.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return t.replace(new RegExp(`(${e})`,'gi'),'<mark>$1</mark>')}
 
+function renderNode(n){
+  if(n.type==='std'){
+    return `<div class="std-head">${hl(n.label)} <em>${hl(n.title)}</em></div>`;
+  } else if(n.type==='text'){
+    const ind=n.indent>0?` para-indent-${n.indent}`:'';
+    return `<div class="para${ind}">${hl(n.text)}</div>`;
+  } else if(n.type==='p'){
+    const ind=n.indent>0?` para-indent-${n.indent}`:'';
+    return `<div class="para${ind}"><span class="para-label">${hl(n.label)}</span>${hl(n.text)}</div>`;
+  }
+  return '';
+}
+
+function nodeText(n){
+  return ((n.label||'')+' '+(n.title||'')+' '+(n.text||'')).toLowerCase();
+}
+
 function renderBody(nodes){
-  let h='<div class="reg-body">';
+  // When no search query, render everything flat
+  if(!activeQuery){
+    return '<div class="reg-body">'+nodes.map(renderNode).join('')+'</div>';
+  }
+  // Group nodes into sections: each {type:'std'} starts a new section.
+  // Nodes before the first std go into a "pre" group (always shown).
+  const sections=[];
+  let current=null;
   nodes.forEach(n=>{
     if(n.type==='std'){
-      h+=`<div class="std-head">${hl(n.label)} <em>${hl(n.title)}</em></div>`;
-    } else if(n.type==='text'){
-      const ind=n.indent>0?` para-indent-${n.indent}`:'';
-      h+=`<div class="para${ind}">${hl(n.text)}</div>`;
-    } else if(n.type==='p'){
-      const ind=n.indent>0?` para-indent-${n.indent}`:'';
-      h+=`<div class="para${ind}"><span class="para-label">${hl(n.label)}</span>${hl(n.text)}</div>`;
+      current={header:n,children:[]};
+      sections.push(current);
+    } else if(current){
+      current.children.push(n);
+    } else {
+      // pre-section nodes (no std header yet)
+      if(!sections.length||sections[0].header!==null){
+        sections.unshift({header:null,children:[]});
+      }
+      sections[0].children.push(n);
     }
   });
-  h+='</div>';return h;
+
+  const q=activeQuery.toLowerCase();
+  let h='<div class="reg-body">';
+  sections.forEach(sec=>{
+    // A section matches if its header or any child contains the query
+    const headerMatch=sec.header&&nodeText(sec.header).includes(q);
+    const childMatch=sec.children.some(n=>nodeText(n).includes(q));
+    const matches=headerMatch||childMatch;
+
+    if(sec.header===null){
+      // Pre-section nodes: always show
+      sec.children.forEach(n=>{h+=renderNode(n);});
+    } else if(matches){
+      // Show full section
+      h+=renderNode(sec.header);
+      sec.children.forEach(n=>{h+=renderNode(n);});
+    } else {
+      // Collapse: show header only, dimmed
+      h+=`<div class="std-head std-collapsed">${sec.header.label} <em>${sec.header.title}</em></div>`;
+    }
+  });
+  h+='</div>';
+  return h;
 }
 
 function buildCards(){
